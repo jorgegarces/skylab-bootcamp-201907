@@ -172,7 +172,7 @@ render () {
             { cats && <Categories onSearchCat={handleSearchCat} /> }
 
             {!meal ? <Results meals={meals} onMeal={handleOnMeal} goCat={handleGoToCategories} paintMeal = { meal => {return <RecipeItem2 meal={meal} onToggle={handleToggleRecipeList} />}}  />
-            : <RecipeDetails meal={meal} onBack={handleGoBack} onToggle={handleToggleRecipeDetail} />}
+            : <RecipeDetails meal={meal} onBack={handleGoBack} onToggle={handleToggleRecipeDetail} ingredients={recipeFormater(meal)}/>}
            
             {!meal  && <Favorites favs={favs} onMeal={handleOnMeal} goCat={handleGoToCategories} paintMeal = { meal => {return <RecipeItem2 meal={meal} onToggle={handleToggleFavorite} />}}  />
             }
